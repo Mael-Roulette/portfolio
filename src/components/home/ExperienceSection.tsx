@@ -4,12 +4,12 @@ import { GoArrowUpRight } from "react-icons/go";
 
 const experiences = [
   {
-    title: "BUT MMI Développement Web",
+    title: "Calitrack",
     items: [
-      "Développement web (HTML, CSS, JavaScript, PHP, etc.)",
-      "Développement mobile (Flutter)",
-      "UI/UX Design",
-      "Gestion de projet (méthodologies agiles, outils de gestion)",
+      "Maquettage UX/UI",
+      "Développement mobile (React Native)",
+      "Développement web (NextJS)",
+      "Campagne de communication",
     ],
   },
   {
@@ -21,14 +21,14 @@ const experiences = [
     ],
   },
   {
-    title: "Calitrack",
+    title: "BUT MMI Développement Web",
     items: [
-      "Maquettage UX/UI",
-      "Développement mobile (React Native)",
-      "Développement web (NextJS)",
-      "Campagne de communication",
+      "Développement web (HTML, CSS, JavaScript, PHP, etc.)",
+      "Développement mobile (Flutter)",
+      "UI/UX Design",
+      "Gestion de projet (méthodologies agiles, outils de gestion)",
     ],
-  },
+  }
 ];
 
 export default function ExperienceSection () {
@@ -78,7 +78,7 @@ export default function ExperienceSection () {
           </Link>
 
           {/* TODO: Ajouter CV */}
-          <Link className="btn-primary" href="" target="_blank">
+          <Link className="btn-primary" href="/mael-roulette-cv.pdf" target="_blank">
             Voir mon CV <GoArrowUpRight className="text-2xl" />
           </Link>
         </div>

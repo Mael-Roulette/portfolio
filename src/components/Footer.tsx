@@ -53,7 +53,7 @@ export default function Footer () {
             </Link>
 
             {/* TODO: Ajouter CV */}
-            <Link className="btn-primary p-3 font-bold" href="" target="_blank">
+            <Link className="btn-primary p-3 font-bold" href="/mael-roulette-cv.pdf" target="_blank">
               CV
             </Link>
           </div>
