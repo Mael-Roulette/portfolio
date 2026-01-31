@@ -8,7 +8,7 @@ export default function ProjectsSection () {
     <section className="border-t-1 border-t-foreground/30 pt-12 flex flex-col gap-5">
       <h2 className="text-6xl lg:text-8xl font-bold mb-8 px-5 lg:px-12">Mes <span className="font-jubble text-secondary">projets</span></h2>
       <ul className="grid lg:grid-cols-3">
-        { projectsCards.map( ( card ) =>
+        { projectsCards.slice( 0, 3 ).map( ( card ) =>
           <li key={ card.slug } className="border-t-1 border-b-1 border-foreground/30 lg:not-last:border-r-1">
             <ProjectCard card={ card } />
           </li>
