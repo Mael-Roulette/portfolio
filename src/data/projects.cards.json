@@ -1,0 +1,20 @@
+[
+    {
+        "slug": "calitrack",
+        "title": "Calitrack",
+        "cover": "/images/calitrack/cover.webp",
+        "tag": "Application mobile"
+    },
+    {
+        "slug": "avbox",
+        "title": "AVBox",
+        "cover": "/images/avbox/cover.webp",
+        "tag": "Application web"
+    },
+    {
+        "slug": "site-internet",
+        "title": "Site internet",
+        "cover": "/images/site-internet/cover.webp",
+        "tag": "Site vitrine"
+    }
+]
