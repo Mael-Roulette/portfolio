@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Calitrack",
+    "items": [
+      "Maquettage UX/UI",
+      "Développement mobile (React Native)",
+      "Développement web (NextJS)",
+      "Campagne de communication"
+    ]
+  },
+  {
+    "title": "Portobello Communication",
+    "items": [
+      "Intégration et développement de sites WordPress (ACF, PHP, HTML/CSS, JavaScript)",
+      "Développement front-end responsive",
+      "Adaptation de maquettes design aux contraintes techniques"
+    ]
+  },
+  {
+    "title": "BUT MMI Développement Web",
+    "items": [
+      "Développement web (HTML, CSS, JavaScript, PHP, etc.)",
+      "Développement mobile (Flutter)",
+      "UI/UX Design",
+      "Gestion de projet (méthodologies agiles, outils de gestion)"
+    ]
+  }
+]

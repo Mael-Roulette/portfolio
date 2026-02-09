@@ -1,43 +1,76 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { FaGithub, FaGitlab } from "react-icons/fa";
 import { GoArrowUpRight } from "react-icons/go";
+import experiences from "@/data/experiences.json";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const experiences = [
-  {
-    title: "Calitrack",
-    items: [
-      "Maquettage UX/UI",
-      "Développement mobile (React Native)",
-      "Développement web (NextJS)",
-      "Campagne de communication",
-    ],
-  },
-  {
-    title: "Portobello Communication",
-    items: [
-      "Intégration et développement de sites WordPress (ACF, PHP, HTML/CSS, JavaScript)",
-      "Développement front-end responsive",
-      "Adaptation de maquettes design aux contraintes techniques",
-    ],
-  },
-  {
-    title: "BUT MMI Développement Web",
-    items: [
-      "Développement web (HTML, CSS, JavaScript, PHP, etc.)",
-      "Développement mobile (Flutter)",
-      "UI/UX Design",
-      "Gestion de projet (méthodologies agiles, outils de gestion)",
-    ],
-  }
-];
+gsap.registerPlugin( ScrollTrigger );
 
 export default function ExperienceSection () {
+  const sectionRef = useRef<HTMLElement | null>( null );
+
+  useEffect( () => {
+    if ( !sectionRef.current ) return;
+
+    const ctx = gsap.context( () => {
+      const tl = gsap.timeline( {
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 75%",
+          once: true,
+        },
+      } );
+
+      // Titre
+      tl.from( ".experience-title", {
+        opacity: 0,
+        x: 80,
+        duration: 1,
+        ease: "power3.out",
+      } );
+
+      // Expériences
+      tl.from(
+        ".experience-item",
+        {
+          opacity: 0,
+          y: 50,
+          duration: 0.9,
+          ease: "power3.out",
+          stagger: 0.25,
+        },
+        "-=0.4"
+      );
+
+      // CTA
+      tl.from(
+        ".experience-cta",
+        {
+          opacity: 0,
+          y: 30,
+          duration: 0.7,
+          ease: "power2.out",
+        },
+        "-=0.2"
+      );
+    }, sectionRef );
+
+    return () => ctx.revert();
+  }, [] );
+
   return (
-    <section className="grid grid-cols-[1fr_2fr] px-5 lg:px-12 py-16">
-      <div></div>
+    <section
+      ref={ sectionRef }
+      className="grid grid-cols-[1fr_2fr] px-5 lg:px-12 py-16"
+    >
+      <div />
 
       <div>
-        <h2 className="text-6xl text-right lg:text-8xl font-bold mb-8">
+        <h2 className="experience-title text-6xl text-right lg:text-8xl font-bold mb-8">
           Mon <span className="font-jubble text-secondary">expérience</span>
         </h2>
 
@@ -45,7 +78,7 @@ export default function ExperienceSection () {
           {experiences.map( ( experience ) => (
             <li
               key={ experience.title }
-              className="flex gap-8 pb-7 border-b-1 border-foreground/30"
+              className="experience-item flex gap-8 pb-7 border-b-1 border-foreground/30"
             >
               <h3 className="font-bold text-5xl min-w-[500px] w-[500px]">
                 {experience.title}
@@ -60,7 +93,7 @@ export default function ExperienceSection () {
           ) )}
         </ul>
 
-        <div className="flex justify-end wrap gap-5 mt-6">
+        <div className="experience-cta flex justify-end wrap gap-5 mt-6">
           <Link
             className="btn-primary"
             href="https://gitlab.com/Mael-Roulette"
@@ -77,8 +110,11 @@ export default function ExperienceSection () {
             Github <FaGithub className="text-2xl" />
           </Link>
 
-          {/* TODO: Ajouter CV */}
-          <Link className="btn-primary" href="/mael-roulette-cv.pdf" target="_blank">
+          <Link
+            className="btn-primary"
+            href="/mael-roulette-cv.pdf"
+            target="_blank"
+          >
             Voir mon CV <GoArrowUpRight className="text-2xl" />
           </Link>
         </div>

@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
 
 const jubble = localFont( {
   src: "../../public/fonts/jubble.otf",
@@ -32,9 +33,11 @@ export default function RootLayout ( {
   return (
     <html lang="fr" className={ `${ztNature.className} ${jubble.className}` }>
       <body className={ `${ztNature.variable} ${jubble.variable}` }>
-        <Header />
-        {children}
-        <Footer />
+        <SmoothScrollProvider>
+          <Header />
+          {children}
+          <Footer />
+        </SmoothScrollProvider>
       </body>
     </html>
   );
