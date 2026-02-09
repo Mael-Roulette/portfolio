@@ -1,12 +1,13 @@
 export interface Card {
-    slug: string,
-    title: string,
+    slug: ProjectDetails["slug"],
+    title: ProjectDetails["title"],
     cover: string,
     tag: string,
 }
 
 export interface ProjectDetails {
     slug: string,
+    title: string,
     hero: string,
     tags: string[],
     technos: string[],
@@ -17,5 +18,5 @@ export interface ProjectDetails {
 
 type ProjectLinks = {
     site: string;
-    github?: string[];
+    github?: string;
 };

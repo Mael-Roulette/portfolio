@@ -12,6 +12,12 @@
         "tag": "Application web"
     },
     {
+        "slug": "breeze",
+        "title": "Breeze",
+        "cover": "/images/breeze/cover.webp",
+        "tag": "Application web"
+    },
+    {
         "slug": "site-internet",
         "title": "Site internet",
         "cover": "/images/site-internet/cover.webp",

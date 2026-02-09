@@ -1,3 +1,6 @@
+import ContentSection from "@/components/projects/ContentSection";
+import HeroSection from "@/components/projects/HeroSection";
+import StackSection from "@/components/projects/StackSection";
 import ProjectsDetails from "@/data/projects.details.json";
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
@@ -39,19 +42,10 @@ export default async function ProjectDetailsPage ( { params }: ProjectDetailsPag
   }
 
   return (
-    <div>
-      <h1>{project.slug}</h1>
-      <p>{project.description}</p>
-
-
-      <h2>Technologies</h2>
-      <ul>
-        {project.technos.map( ( techno ) => (
-          <li key={ techno }>{techno}</li>
-        ) )}
-      </ul>
-
-      <p>{project.content}</p>
-    </div>
+    <>
+      <HeroSection project={ project } />
+      <StackSection stack={ project.technos } />
+      <ContentSection projectContent={ project.content } />
+    </>
   );
 }
