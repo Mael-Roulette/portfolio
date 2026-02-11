@@ -9,14 +9,54 @@
         "technos": [
             "Appwrite",
             "React native",
+            "NextJS",
             "Typescript",
-            "Nativewind"
+            "Tailwind"
         ],
         "description": "CaliTrack est une application mobile développée pour les pratiquants de street workout. Elle leur permet de planifier leurs entraînements, de suivre leurs objectifs et de visualiser leur progression facilement. L'application a été pensée pour répondre aux besoins des pratiquants en leur proposant un outil accessible.",
         "content": "<p>Pratiquant de street workout depuis plus de 4 ans, je cherchais une application capable de m'accompagner dans ma progression. Mon objectif était simple : trouver une application claire et vraiment axée sur mon sport. Après avoir testé plusieurs applications sans jamais vraiment trouver celle qui me convenait, j'ai décidé de développer la mienne (un vrai développeur au final) !</ p> <p>L'application est pensé pour donner à chaque pratiquant un outil simple pour visualiser ses efforts, ses progrès et ses objectifs. Calitrack existe pour qu'on puisse regarder en arrière et voir concrètement notre évolution, peu importe notre niveau de départ.</p> <p>Même si CaliTrack est avant tout un projet personnel né d'une envie, j'ai voulu faire les choses bien. J'ai d'abord rédigé un cahier des charges pour définir les fonctionnalités essentielles et mieux comprendre les besoins des futurs utilisateurs (ou les miens). Cela m'a permis de construire une arborescence claire, puis de concevoir les maquettes UX et UI étape par étape. Une fois ces bases posées, j'ai lancé le développement avec React Native pour l'application et Appwrite pour la gestion des données. C'est une stack légère, efficace et bien adaptée à mes besoins.</p>",
         "links": {
             "site": "https://calitrack.fr",
-            "github": "https://github.com/Mael-Roulette/Calitrack-mobile"
+            "github": "https://github.com/Mael-Roulette/Calitrack"
+        }
+    },
+    {
+        "slug": "avbox",
+        "title": "AVBox",
+        "hero": "/images/avbox/hero.webp",
+        "tags": [
+            "Application web"
+        ],
+        "technos": [
+            "NextJS",
+            "Typescript",
+            "Tailwind",
+            "ExpressJS",
+            "MongoDB"
+        ],
+        "description": "AVBox est une plateforme web conçue pour les étudiants du BUT MMI de l'IUT de Laval (53), qui simplifie la réservation de matériel audiovisuel. Elle centralise les demandes, optimise la communication et permet un suivi efficace des emprunts.",
+        "content": "<p>AVBox est une application web conçue pour moderniser et simplifier la réservation de matériel audiovisuel au sein du BUT MMI de l'IUT de Laval (53). Elle remplace un système basé sur des formulaires papiers et des échanges par e-mail, peu intuitif et difficile à gérer. L'objectif : transformer un processus complexe en une expérience plus simple, plus rapide et structurée.</p> <p>Grâce à AVBox, les étudiants peuvent consulter en temps réel le matériel disponible, effectuer une demande de réservation en quelques clics et suivre l'état de leurs emprunts depuis un espace personnel.</p> <p>Côté enseignants et responsables du matériel, la plateforme offre une vision globale des demandes en cours, des disponibilités et des périodes de forte sollicitation. Elle facilite la validation des réservations, centralise les échanges et conserve un historique complet des emprunts. Cette visibilité permet d'anticiper les besoins, d'optimiser la gestion du parc matériel et de sécuriser le suivi dans le temps.</p>",
+        "links": {
+            "site": "https://avbox.mael-roulette.fr",
+            "github": "https://github.com/Mael-Roulette/AVBox"
+        }
+    },
+    {
+        "slug": "brigade-de-l-assainissement",
+        "title": "Brigade de l'assainissement",
+        "hero": "/images/brigade-de-l-assainissement/hero.webp",
+        "tags": [
+            "Site vitrine"
+        ],
+        "technos": [
+            "WordPress",
+            "PHP",
+            "Sass"
+        ],
+        "description": "La Brigade de l'Assainissement est une entreprise spécialisée dans le débouchage et l'entretien de canalisations à Laval et dans ses environs. Ce projet avait pour but de créer un site vitrine professionnel pour améliorer sa visibilité en ligne, présenter ses services, et permettre aux clients de la contacter facilement, notamment en cas d'urgence.",
+        "content": "<p>L'objectif principal de ce site était de permettre à l'entreprise de développer sa visibilité locale et régionale. Le site a été conçu pour mettre en avant les services proposés, les zones d'intervention, et pour rassurer les visiteurs sur la réactivité et le professionnalisme de l'équipe. Deux formulaires ont été intégrés : l'un pour les demandes de devis, l'autre pour les prises de contact rapides. Ce site simple, mais fonctionnel, permet aujourd'hui à l'entreprise d'être plus accessible en ligne, tout en inspirant confiance dès les premières secondes.</p> <p>Sur ce projet, j'ai été en charge du développement du site sous le CMS WordPress. J'ai donc créé un thème sur mesure par rapport à la maquette fournie et aux besoins du client. Pour m'aider dans le développer et pour permettre au client de pouvoir administrer facilement son site internet.</p>",
+        "links": {
+            "site": "https://www.brigadeassainissement.fr/"
         }
     }
 ]

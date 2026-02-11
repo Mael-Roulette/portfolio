@@ -1,0 +1,29 @@
+[
+    {
+        "slug": "breeze",
+        "title": "Breeze",
+        "cover": "/images/breeze/cover.webp",
+        "tag": "Application web"
+    },
+    {
+        "slug": "breeze",
+        "title": "Breeze",
+        "hero": "/images/breeze/hero.webp",
+        "tags": [
+            "Application web"
+        ],
+        "technos": [
+            "NextJS",
+            "Typescript",
+            "Tailwind",
+            "PostgreSQL",
+            "NestJS"
+        ],
+        "description": "Breeze est une application web de gestion pour restaurants, la plateforme centralise les fournisseurs, les mercuriales, l'inventaire et les fiches techniques. Elle permet de gérer plusieurs établissements, d'inviter des collaborateurs via un système de rôles sécurisé, et d'assurer un suivi précis des coûts (HT/TTC, TVA, coefficients, marges).",
+        "content": "<p>Cette application web est une solution complète de gestion dédiée aux restaurants, elle permet de centraliser l'ensemble des opérations liées aux fournisseurs, aux produits, aux inventaires et aux fiches techniques. Elle permet à un utilisateur de créer ou rejoindre un restaurant dès la première connexion grâce à un système d'invitation sécurisé. Chaque établissement dispose d'un gérant et peut intégrer plusieurs collaborateurs avec des rôles définis, garantissant une gestion structurée et collaborative.</p> <p>La plateforme intègre un module de gestion des fournisseurs permettant d'ajouter, modifier et suivre les contacts commerciaux, d'importer des mercuriales via Excel et de conserver un historique des derniers tarifs. Les produits sont liés aux fournisseurs et peuvent exister avec plusieurs prix selon les conditions d'achat. Un moteur de recherche et des filtres facilitent la navigation dans les catalogues, tandis que les mises à jour globales permettent d'importer ou remplacer rapidement les données.</p> <p>Le module inventaire offre une vision précise des stocks avec calcul automatique des valorisations. Chaque modification est tracée, incluant l'identification du compte ayant effectué le changement et l'historique des dernières actions. Les inventaires peuvent être sauvegardés à une date donnée et exportés en version imprimable, assurant une traçabilité claire et une meilleure maîtrise des coûts.</p> <p>Un carnet de recettes complète la solution avec des fiches techniques détaillées comprenant ingrédients, quantités, prix unitaires HT, calcul du coût total, nombre de portions et détermination du prix de vente via coefficient.</p>",
+        "links": {
+            "site": "https://breeze.fr",
+            "github": "https://github.com/Mael-Roulette/breeze"
+        }
+    }
+]

@@ -12,15 +12,9 @@
         "tag": "Application web"
     },
     {
-        "slug": "breeze",
-        "title": "Breeze",
-        "cover": "/images/breeze/cover.webp",
-        "tag": "Application web"
-    },
-    {
-        "slug": "site-internet",
-        "title": "Site internet",
-        "cover": "/images/site-internet/cover.webp",
+        "slug": "brigade-de-l-assainissement",
+        "title": "Brigade de l'assainissement",
+        "cover": "/images/brigade-de-l-assainissement/cover.webp",
         "tag": "Site vitrine"
     }
 ]
