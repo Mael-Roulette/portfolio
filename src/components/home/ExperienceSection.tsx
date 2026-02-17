@@ -2,36 +2,52 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FaGithub, FaGitlab } from "react-icons/fa";
 import { GoArrowUpRight } from "react-icons/go";
 import experiences from "@/data/experiences.json";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin( ScrollTrigger );
+gsap.registerPlugin(ScrollTrigger);
 
-export default function ExperienceSection () {
-  const sectionRef = useRef<HTMLElement | null>( null );
+const technos = [
+  "appwrite",
+  "expressjs",
+  "mongodb",
+  "nestjs",
+  "nextjs",
+  "php",
+  "postgresql",
+  "react-native",
+  "sass",
+  "tailwind",
+  "typescript",
+  "wordpress",
+];
 
-  useEffect( () => {
-    if ( !sectionRef.current ) return;
+export default function ExperienceSection() {
+  const sectionRef = useRef<HTMLElement | null>(null);
 
-    const ctx = gsap.context( () => {
-      const tl = gsap.timeline( {
+  useEffect(() => {
+    if (!sectionRef.current) return;
+
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top 75%",
           once: true,
         },
-      } );
+      });
 
       // Titre
-      tl.from( ".experience-title", {
+      tl.from(".experience-title", {
         opacity: 0,
         x: 80,
         duration: 1,
         ease: "power3.out",
-      } );
+      });
 
       // Expériences
       tl.from(
@@ -43,7 +59,7 @@ export default function ExperienceSection () {
           ease: "power3.out",
           stagger: 0.25,
         },
-        "-=0.4"
+        "-=0.4",
       );
 
       // CTA
@@ -55,19 +71,34 @@ export default function ExperienceSection () {
           duration: 0.7,
           ease: "power2.out",
         },
-        "-=0.2"
+        "-=0.2",
       );
-    }, sectionRef );
+    }, sectionRef);
 
     return () => ctx.revert();
-  }, [] );
+  }, []);
 
   return (
     <section
-      ref={ sectionRef }
-      className="grid grid-cols-[1fr_2fr] px-5 lg:px-12 py-16"
+      ref={sectionRef}
+      className="grid grid-cols-[1fr_2fr] gap-10 px-5 lg:px-12 py-16"
     >
-      <div />
+      <div className="flex items-center justify-center">
+        <div className="grid grid-cols-5 gap-4">
+          {technos.map((techno) => (
+            <div
+              key={techno}
+              className="flex items-center justify-center w-24 h-24 relative overflow-hidden rounded-md transition-all hover:scale-110"
+            >
+              <Image
+                src={`/images/technos/${techno}.webp`}
+                alt={techno.charAt(0).toUpperCase() + techno.slice(1)}
+                fill
+              />
+            </div>
+          ))}
+        </div>
+      </div>
 
       <div>
         <h2 className="experience-title text-6xl text-right lg:text-8xl font-bold mb-8">
@@ -75,22 +106,22 @@ export default function ExperienceSection () {
         </h2>
 
         <ul className="space-y-5">
-          {experiences.map( ( experience ) => (
+          {experiences.map((experience) => (
             <li
-              key={ experience.title }
-              className="experience-item flex gap-8 pb-7 border-b-1 border-foreground/30"
+              key={experience.title}
+              className="experience-item flex gap-8 pb-7 border-b border-foreground/30"
             >
-              <h3 className="font-bold text-5xl min-w-[500px] w-[500px]">
+              <h3 className="font-bold text-5xl min-w-125 w-125">
                 {experience.title}
               </h3>
 
               <ul className="list-disc text-lg w-full">
-                {experience.items.map( ( item, index ) => (
-                  <li key={ index }>{item}</li>
-                ) )}
+                {experience.items.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
               </ul>
             </li>
-          ) )}
+          ))}
         </ul>
 
         <div className="experience-cta flex justify-end wrap gap-5 mt-6">
