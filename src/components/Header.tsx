@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export default function Header () {
   const pathname = usePathname();
-  const [ menuOpen, setMenuOpen ] = useState( false );
+  const [ menuOpen, setMenuOpen ] = useState<boolean>( false );
 
   const navItems = [
     { label: "Accueil", link: "/" },

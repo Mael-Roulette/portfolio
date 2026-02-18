@@ -26,7 +26,6 @@ const technos = [
   "wordpress",
 ];
 
-// Triplé pour un défilement parfaitement infini sans saut visible
 const tripled = [ ...technos, ...technos, ...technos ];
 
 interface TrackProps {
