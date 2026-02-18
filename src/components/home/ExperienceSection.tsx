@@ -31,15 +31,20 @@ const tripled = [ ...technos, ...technos, ...technos ];
 interface TrackProps {
   reverse?: boolean;
   duration?: number;
+  offset?: number;
+  customStyles?: string;
 }
 
-function Track ( { reverse = false, duration = 30 }: TrackProps ) {
+function Track ( { reverse = false, duration = 30, offset = 0, customStyles }: TrackProps ) {
+  const delay = -( duration * offset );
+
   return (
-    <div className="flex overflow-hidden">
+    <div className={ `flex overflow-hidden ${customStyles}` } >
       <div
         className="flex gap-3 shrink-0"
         style={ {
-          animation: `marquee ${duration}s linear infinite ${reverse ? "reverse" : "normal"}`,
+          animation: `tech ${duration}s linear infinite ${reverse ? "reverse" : "normal"}`,
+          animationDelay: `${delay}s`,
         } }
       >
         { tripled.map( ( techno, i ) => (
@@ -127,32 +132,13 @@ export default function ExperienceSection () {
             {/* 2 rangées sur mobile, 3 rangées sur desktop */}
             <div className="flex flex-col gap-3">
               {/* Rangée 1 — toujours visible */}
-              <Track reverse={ false } duration={ 30 } />
+              <Track reverse={ false } duration={ 24 } offset={ 0.4 } />
 
               {/* Rangée 2 — toujours visible */}
-              <Track reverse={ true } duration={ 24 } />
+              <Track reverse={ true } duration={ 26 } />
 
               {/* Rangée 3 — desktop uniquement */}
-              <div className="hidden lg:flex overflow-hidden">
-                <div
-                  className="flex gap-3 shrink-0"
-                  style={ { animation: "marquee 38s linear infinite normal" } }
-                >
-                  { tripled.map( ( techno, i ) => (
-                    <div
-                      key={ `third-${techno}-${i}` }
-                      className="relative w-20 h-20 shrink-0 rounded-lg overflow-hidden transition-transform hover:scale-110"
-                    >
-                      <Image
-                        src={ `/images/technos/${techno}.webp` }
-                        alt={ techno.charAt( 0 ).toUpperCase() + techno.slice( 1 ) }
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
-                  ) ) }
-                </div>
-              </div>
+              <Track reverse={ false } duration={ 28 } customStyles="hidden lg:flex" />
             </div>
           </div>
           <div>
