@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaGithub, FaGitlab, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { GoArrowRight } from "react-icons/go";
 
 export default function Footer () {
@@ -28,13 +28,13 @@ export default function Footer () {
               Me contacter <GoArrowRight className="text-2xl" />
             </Link>
 
-            <Link
+            {/* <Link
               className="btn-primary p-3"
               href="https://gitlab.com/Mael-Roulette"
               target="_blank"
             >
               <FaGitlab className="text-2xl" />
-            </Link>
+            </Link> */}
 
             <Link
               className="btn-primary p-3"
