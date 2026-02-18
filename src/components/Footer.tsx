@@ -11,31 +11,25 @@ export default function Footer () {
 
   return (
     <footer className="border-foreground/30 border-t-1">
-      <div className="flex">
-        <div className="py-3 pr-5 lg:py-5 lg:pr-8 lg:pl-12 w-fit border-r border-foreground/30 flex items-center">
+      <div className="flex flex-col lg:flex-row">
+        <div className="py-3 pr-5 lg:py-5 lg:pr-8 lg:pl-12 lg:w-fit border-b lg:border-b-0 lg:border-r border-foreground/30 flex items-center justify-center lg:justify-start">
           <Link href="/">
             {/* TODO: Ajouter le logo */}
             <p className="text-xl">ROULETTE</p>
           </Link>
         </div>
         <div className="py-4 px-5 space-y-4">
-          <p className="text-2xl font-bold">Une idée ou un projet ? Échangeons !</p>
-          <div className="flex gap-4">
+          <p className="text-xl lg:text-2xl font-bold">Une idée ou un projet&nbsp;? Échangeons&nbsp;!</p>
+          <div className="flex flex-wrap gap-4">
             <Link
               className="btn-primary"
               href="mailto:contact@mael-roulette.fr"
             >
               Me contacter <GoArrowRight className="text-2xl" />
             </Link>
+          </div>
 
-            {/* <Link
-              className="btn-primary p-3"
-              href="https://gitlab.com/Mael-Roulette"
-              target="_blank"
-            >
-              <FaGitlab className="text-2xl" />
-            </Link> */}
-
+          <div className="flex flex-wrap gap-4">
             <Link
               className="btn-primary p-3"
               href="https://github.com/Mael-Roulette"
@@ -60,20 +54,21 @@ export default function Footer () {
         </div>
       </div>
       <div className="border-t border-foreground/30">
-        <ul className="grid grid-cols-3 border-foreground/30">
+        <ul className="grid lg:grid-cols-3 border-foreground/30">
           {legalMenu.map( ( item, index ) => (
             <li
               key={ index }
               className="
           flex
           justify-center
-          border-r border-foreground/30
-          last:border-r-0
-          first:justify-end
+          border-b border-foreground/30
+          last:border-r-0 lg:last:justify-start
+          lg:first:justify-end
           nth-[2]:justify-center nth-[2]:text-secondary nth-[2]:text-lg
+          lg:border-b-0 lg:border-r
         "
             >
-              <Link href={ item.link } className="px-12 py-4 flex items-center">
+              <Link href={ item.link } className="px-5 py-2 lg:px-12 flex items-center">
                 {item.label}
               </Link>
             </li>

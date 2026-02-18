@@ -20,6 +20,13 @@ body {
   font-family: var(--font-ztnature), Helvetica, sans-serif;
 }
 
+@layer base {
+   @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-33.333%); }
+  }
+}
+
 @layer components {
   .btn-primary {
     border-radius: 50px;
