@@ -21,9 +21,6 @@ Un portfolio moderne et performant construit avec **Next.js 16**, **React 19** e
 ### Tools & Quality
 - **[ESLint](https://eslint.org/)** - Linting et qualité du code
 
-## 📝 License
-Ce projet est open source et disponible sous la [MIT License](LICENSE).
-
 ## 👨‍💻 Auteur
 Créé par moi-même comme vitrine pour montrer mes projets et compétences.
 
