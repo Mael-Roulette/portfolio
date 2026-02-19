@@ -1,20 +1,26 @@
 [
-    {
-        "slug": "calitrack",
-        "title": "Calitrack",
-        "cover": "/images/calitrack/cover.webp",
-        "tag": "Application mobile"
-    },
-    {
-        "slug": "avbox",
-        "title": "AVBox",
-        "cover": "/images/avbox/cover.webp",
-        "tag": "Application web"
-    },
-    {
-        "slug": "brigade-de-l-assainissement",
-        "title": "Brigade de l'assainissement",
-        "cover": "/images/brigade-de-l-assainissement/cover.webp",
-        "tag": "Site vitrine"
-    }
+  {
+    "slug": "calitrack",
+    "title": "Calitrack",
+    "cover": "/images/calitrack/cover.webp",
+    "tag": "Application mobile"
+  },
+  {
+    "slug": "avbox",
+    "title": "AVBox",
+    "cover": "/images/avbox/cover.webp",
+    "tag": "Application web"
+  },
+  {
+    "slug": "brigade-de-l-assainissement",
+    "title": "Brigade de l'assainissement",
+    "cover": "/images/brigade-de-l-assainissement/cover.webp",
+    "tag": "Site vitrine"
+  },
+  {
+    "slug": "ati-35",
+    "title": "ATI 35",
+    "cover": "/images/ati-35/cover.webp",
+    "tag": "Site vitrine"
+  }
 ]

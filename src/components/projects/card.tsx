@@ -1,15 +1,26 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Card } from "@/types/project";
+import { splitTitleWithNumbers } from "@/utils/string";
 
 interface ProjectCardProps {
     card: Card
 }
 
 export default function ProjectCard ( { card }: ProjectCardProps ) {
+  const titleParts = splitTitleWithNumbers( card.title );
+
   return (
     <Link href={ `/projets/${ card.slug }` } className="block px-5 py-10 lg:py-12 lg:px-12 space-y-4">
-      <h3 className="font-jubble text-3xl lg:text-4xl">{ card.title }</h3>
+      <h3 className="font-jubble text-3xl lg:text-4xl">
+        {titleParts.map( ( part, index ) => (
+          part.isNumber ? (
+            <span key={ index } className="font-sans font-bold">{part.text}</span>
+          ) : (
+            <span key={ index }>{part.text}</span>
+          )
+        ) )}
+      </h3>
       <div className="w-full h-62.5 lg:h-87.5 rounded-lg relative overflow-hidden">
         <Image
           src={ card.cover }
