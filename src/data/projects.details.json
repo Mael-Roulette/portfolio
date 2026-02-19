@@ -20,10 +20,7 @@
     "technos": ["NextJS", "Typescript", "Tailwind", "ExpressJS", "MongoDB"],
     "description": "AVBox est une plateforme web conçue pour les étudiants du BUT MMI de l'IUT de Laval (53), qui simplifie la réservation de matériel audiovisuel. Elle centralise les demandes, optimise la communication et permet un suivi efficace des emprunts.",
     "content": "<p>AVBox est une application web conçue pour moderniser et simplifier la réservation de matériel audiovisuel au sein du BUT MMI de l'IUT de Laval (53). Elle remplace un système basé sur des formulaires papiers et des échanges par e-mail, peu intuitif et difficile à gérer. L'objectif : transformer un processus complexe en une expérience plus simple, plus rapide et structurée.</p> <p>Grâce à AVBox, les étudiants peuvent consulter en temps réel le matériel disponible, effectuer une demande de réservation en quelques clics et suivre l'état de leurs emprunts depuis un espace personnel.</p> <p>Côté enseignants et responsables du matériel, la plateforme offre une vision globale des demandes en cours, des disponibilités et des périodes de forte sollicitation. Elle facilite la validation des réservations, centralise les échanges et conserve un historique complet des emprunts. Cette visibilité permet d'anticiper les besoins, d'optimiser la gestion du parc matériel et de sécuriser le suivi dans le temps.</p>",
-    "links": {
-      "site": "https://avbox.mael-roulette.fr",
-      "github": "https://github.com/Mael-Roulette/AVBox"
-    }
+    "links": {}
   },
   {
     "slug": "brigade-de-l-assainissement",
