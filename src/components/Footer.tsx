@@ -15,7 +15,7 @@ export default function Footer () {
         <div className="py-3 pr-5 lg:py-5 lg:pr-8 lg:pl-12 lg:w-fit border-b lg:border-b-0 lg:border-r border-foreground/30 flex items-center justify-center lg:justify-start">
           <Link href="/">
             {/* TODO: Ajouter le logo */}
-            <p className="text-xl">ROULETTE</p>
+            <p className="text-3xl font-jubble text-secondary">ROULETTE</p>
           </Link>
         </div>
         <div className="py-4 px-5 space-y-4 w-full">

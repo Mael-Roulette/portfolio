@@ -19,7 +19,7 @@ export default function Header () {
       <div className="py-3 pr-5 lg:py-5 lg:pr-8 w-fit border-r border-foreground/30">
         <Link href="/">
           {/* TODO: Ajouter le logo */}
-          <p className="text-xl">ROULETTE</p>
+          <p className="text-3xl font-jubble text-secondary">ROULETTE</p>
         </Link>
       </div>
 
@@ -35,7 +35,7 @@ export default function Header () {
                         lg:border-0 lg:first:border-t-0
                       "
             >
-              <Link href={ item.link } className={ `group block text-3xl py-5 lg:text-lg font-bold uppercase lg:capitalize ${item.link === pathname && "text-secondary"}` }>
+              <Link href={ item.link } onClick={ () => setMenuOpen( false ) } className={ `group block text-3xl py-5 lg:text-lg font-bold uppercase lg:capitalize ${item.link === pathname && "text-secondary"}` }>
                 <div className="relative overflow-hidden">
                   <p className="group-hover:-translate-y-7 duration-400">{item.label}</p>
                   <p className="absolute hidden lg:block top-7 left-0 group-hover:top-0 duration-400">{item.label}</p>
