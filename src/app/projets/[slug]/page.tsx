@@ -43,12 +43,23 @@ export async function generateMetadata (
       siteName: "Maël Roulette",
       type: "article",
       locale: "fr_FR",
+      images: [
+        {
+          url: "/images/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: `${project.title} - Projet développé par Maël Roulette`,
+        }
+      ],
     },
 
     twitter: {
       card: "summary_large_image",
       title: `${project.title} - Maël Roulette`,
       description: project.description,
+      images: [
+        "/images/og-image.png",
+      ],
     },
 
     robots: {

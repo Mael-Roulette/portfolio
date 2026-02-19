@@ -39,14 +39,23 @@ export const metadata: Metadata = {
     url: "https://mael-roulette.fr",
     siteName: "Maël Roulette",
     locale: "fr_FR",
-    type: "website"
+    type: "website",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Portfolio de Maël Roulette - Développeur Web & Applications"
+      }
+    ]
   },
 
   twitter: {
     card: "summary_large_image",
     title: "Maël Roulette - Développeur Web & Applications",
     description:
-      "Portfolio de Maël Roulette : projets et réalisations en développement web et applications."
+      "Portfolio de Maël Roulette : projets et réalisations en développement web et applications.",
+    images: [ "/images/og-image.png" ]
   },
 
   authors: [ { name: "Maël Roulette" } ],
