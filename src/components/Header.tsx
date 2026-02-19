@@ -11,7 +11,7 @@ export default function Header () {
   const navItems = [
     { label: "Accueil", link: "/" },
     { label: "Projets", link: "/projets" },
-    { label: "Contact", link: "/contact" }
+    { label: "Contact", link: "#footer" }
   ];
 
   return (
@@ -31,10 +31,8 @@ export default function Header () {
               key={ item.link }
               className="
                         py-8 lg:py-0
-                        border-b border-foreground/30
-                        first:border-t border-foreground/30
-                        lg:border-0
-                        lg:first:border-t-0
+                        border-b border-foreground/30 first:border-t
+                        lg:border-0 lg:first:border-t-0
                       "
             >
               <Link href={ item.link } className={ `group block text-3xl py-5 lg:text-lg font-bold uppercase lg:capitalize ${item.link === pathname && "text-secondary"}` }>
@@ -67,12 +65,12 @@ export default function Header () {
             rx="0.5"
             className="
       origin-center
-      -translate-y-[4px]
-      translate-x-[7px]
+      -translate-y-1
+      translate-x-1.75
       transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)]
       group-aria-pressed:translate-x-0
       group-aria-pressed:translate-y-0
-      group-aria-pressed:rotate-[315deg]
+      group-aria-pressed:rotate-315
     "
           />
 
@@ -96,12 +94,12 @@ export default function Header () {
             height="1"
             rx="0.5"
             className="
-      origin-center
-      translate-y-[4px]
-      transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)]
-      group-aria-pressed:translate-y-0
-      group-aria-pressed:rotate-[135deg]
-    "
+              origin-center
+              translate-y-1
+              transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)]
+              group-aria-pressed:translate-y-0
+              group-aria-pressed:rotate-135
+            "
           />
         </svg>
 

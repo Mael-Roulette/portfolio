@@ -31,7 +31,7 @@ export default function RootLayout ( {
   children: React.ReactNode;
 }> ) {
   return (
-    <html lang="fr" className={ `${ztNature.className} ${jubble.className}` }>
+    <html lang="fr" className={ `${ztNature.className} ${jubble.className} scroll-smooth` }>
       <body className={ `${ztNature.variable} ${jubble.variable}` }>
         <SmoothScrollProvider>
           <Header />

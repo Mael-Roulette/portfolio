@@ -74,7 +74,7 @@ export default function ProjectsSection () {
         {projectsCards.slice( 0, 3 ).map( ( card ) => (
           <li
             key={ card.slug }
-            className="project-card border-t border-b border-foreground/30 lg:not-last:border-r"
+            className="project-card first:border-t not-first:border-t-0 border-b border-foreground/30 lg:border-t lg:not-first:border-t lg:not-last:border-r"
           >
             <ProjectCard card={ card } />
           </li>

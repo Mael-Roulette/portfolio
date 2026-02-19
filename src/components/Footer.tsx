@@ -10,7 +10,7 @@ export default function Footer () {
   ];
 
   return (
-    <footer className="border-foreground/30 border-t">
+    <footer className="border-foreground/30 border-t" id="footer">
       <div className="flex flex-col lg:flex-row">
         <div className="py-3 pr-5 lg:py-5 lg:pr-8 lg:pl-12 lg:w-fit border-b lg:border-b-0 lg:border-r border-foreground/30 flex items-center justify-center lg:justify-start">
           <Link href="/">

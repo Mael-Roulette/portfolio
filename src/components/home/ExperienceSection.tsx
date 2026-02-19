@@ -1,6 +1,7 @@
 "use client";
 
 import experiences from "@/data/experiences.json";
+import { splitTechnosForTracks, tripleSlice } from "@/utils/technos";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
@@ -11,31 +12,15 @@ import { GoArrowUpRight } from "react-icons/go";
 
 gsap.registerPlugin( ScrollTrigger );
 
-const technos = [
-  "appwrite",
-  "expressjs",
-  "mongodb",
-  "nestjs",
-  "nextjs",
-  "php",
-  "postgresql",
-  "react-native",
-  "sass",
-  "tailwind",
-  "typescript",
-  "wordpress",
-];
-
-const tripled = [ ...technos, ...technos, ...technos ];
-
 interface TrackProps {
+  technos: string[];
   reverse?: boolean;
   duration?: number;
   offset?: number;
   customStyles?: string;
 }
 
-function Track ( { reverse = false, duration = 30, offset = 0, customStyles }: TrackProps ) {
+function Track  ( { technos, reverse = false, duration = 30, offset = 0, customStyles }: TrackProps ) {
   const delay = -( duration * offset );
 
   return (
@@ -47,7 +32,7 @@ function Track ( { reverse = false, duration = 30, offset = 0, customStyles }: T
           animationDelay: `${delay}s`,
         } }
       >
-        { tripled.map( ( techno, i ) => (
+        { technos.map( ( techno, i ) => (
           <div
             key={ `${techno}-${i}` }
             className="relative w-16 h-16 lg:w-20 lg:h-20 shrink-0 rounded-lg overflow-hidden transition-transform hover:scale-110"
@@ -67,6 +52,7 @@ function Track ( { reverse = false, duration = 30, offset = 0, customStyles }: T
 
 export default function ExperienceSection () {
   const sectionRef = useRef<HTMLElement | null>( null );
+  const [ track1, track2, track3 ] = splitTechnosForTracks( 3 );
 
   useEffect( () => {
     if ( !sectionRef.current ) return;
@@ -121,9 +107,9 @@ export default function ExperienceSection () {
           Mon <span className="font-jubble text-secondary">expérience</span>
         </h2>
 
-        <div className="grid lg:grid-cols-[1fr_2fr] gap-8 items-center">
+        <div className="grid lg:grid-cols-[1fr_2fr] gap-12 items-center">
           <div
-            className="relative overflow-hidden"
+            className="relative overflow-x-hidden"
             style={ {
               maskImage: "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
               WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
@@ -131,14 +117,9 @@ export default function ExperienceSection () {
           >
             {/* 2 rangées sur mobile, 3 rangées sur desktop */}
             <div className="flex flex-col gap-3">
-              {/* Rangée 1 — toujours visible */}
-              <Track reverse={ false } duration={ 24 } offset={ 0.4 } />
-
-              {/* Rangée 2 — toujours visible */}
-              <Track reverse={ true } duration={ 26 } />
-
-              {/* Rangée 3 — desktop uniquement */}
-              <Track reverse={ false } duration={ 28 } customStyles="hidden lg:flex" />
+              <Track technos={ tripleSlice( track1 ) } reverse={ false } duration={ 18 } offset={ 0.2 } />
+              <Track technos={ tripleSlice( track2 ) } reverse={ true }  duration={ 18 } offset={ 0.4 } />
+              <Track technos={ tripleSlice( track3 ) } reverse={ false } duration={ 18 } offset={ 0.8 } customStyles="hidden lg:flex" />
             </div>
           </div>
           <div>
