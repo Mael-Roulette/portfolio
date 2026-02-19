@@ -28,7 +28,7 @@ export default function ProjectsSection () {
       tl.from( ".projects-title", {
         opacity: 0,
         y: 60,
-        duration: 1,
+        duration: .6,
         delay: 1,
         ease: "power3.out",
       } );
@@ -38,8 +38,8 @@ export default function ProjectsSection () {
         {
           opacity: 0,
           y: 50,
-          duration: 0.9,
-          delay: 0.4,
+          duration: 0.5,
+          delay: 0.2,
           ease: "power3.out",
           stagger: 0.2,
         },
@@ -51,7 +51,7 @@ export default function ProjectsSection () {
         {
           opacity: 0,
           y: 30,
-          duration: 0.9,
+          duration: 0.5,
           ease: "power2.out",
         },
         "-=0.2"
@@ -64,7 +64,7 @@ export default function ProjectsSection () {
   return (
     <section
       ref={ sectionRef }
-      className="border-t-1 border-t-foreground/30 pt-12 flex flex-col gap-5"
+      className="border-t border-t-foreground/30 pt-12 flex flex-col gap-5"
     >
       <h2 className="projects-title text-6xl lg:text-8xl font-bold mb-8 px-5 lg:px-12">
         Mes <span className="font-jubble text-secondary">projets</span>
@@ -74,7 +74,7 @@ export default function ProjectsSection () {
         {projectsCards.slice( 0, 3 ).map( ( card ) => (
           <li
             key={ card.slug }
-            className="project-card border-t-1 border-b-1 border-foreground/30 lg:not-last:border-r-1"
+            className="project-card border-t border-b border-foreground/30 lg:not-last:border-r"
           >
             <ProjectCard card={ card } />
           </li>

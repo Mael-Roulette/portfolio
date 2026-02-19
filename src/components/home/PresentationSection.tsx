@@ -34,7 +34,7 @@ export default function PresentationSection () {
   return (
     <section
       ref={ sectionRef }
-      className="flex flex-col items-center justify-center gap-4 px-5 py-20 mx-auto max-w-[990px]"
+      className="flex flex-col items-center justify-center gap-4 px-5 py-20 mx-auto max-w-247.5"
     >
       <p className="reveal text-center text-lg">
         Bienvenue sur mon portfolio !

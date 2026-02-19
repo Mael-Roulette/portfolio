@@ -26,7 +26,6 @@ const technos = [
   "wordpress",
 ];
 
-// Triplé pour un défilement parfaitement infini sans saut visible
 const tripled = [ ...technos, ...technos, ...technos ];
 
 interface TrackProps {
@@ -41,7 +40,6 @@ function Track ( { reverse = false, duration = 30 }: TrackProps ) {
         className="flex gap-3 shrink-0"
         style={ {
           animation: `marquee ${duration}s linear infinite ${reverse ? "reverse" : "normal"}`,
-          // on déplace exactement 1/3 (un set de technos)
         } }
       >
         { tripled.map( ( techno, i ) => (
@@ -113,9 +111,7 @@ export default function ExperienceSection () {
 
   return (
     <section ref={ sectionRef } className="px-5 lg:px-12 py-16">
-
-      {/* ── Slider de technos ─────────────────────────────────── */}
-      <div className="relative mb-12 overflow-hidden [mask-image:linear-gradient(to_right,transparent_0%,black_12%,black_88%,transparent_100%)]">
+      <div className="relative mb-12 overflow-hidden `mask-[linear-gradient(to_right,transparent_0%,black_12%,black_88%,transparent_100%)]">
         {/* Mobile : 2 rangées / Desktop : 3 rangées */}
         <div className="flex flex-col gap-3">
           <Track reverse={ false } duration={ 30 } />
@@ -144,7 +140,6 @@ export default function ExperienceSection () {
         </div>
       </div>
 
-      {/* ── Contenu expérience ────────────────────────────────── */}
       <div>
         <h2 className="experience-title text-6xl text-right lg:text-8xl font-bold mb-8">
           Mon <span className="font-jubble text-secondary">expérience</span>
@@ -193,7 +188,6 @@ export default function ExperienceSection () {
         </div>
       </div>
 
-      {/* ── Keyframe marquee (injecté en style global via Tailwind @layer) ── */}
       <style jsx global>{ `
         @keyframes marquee {
           from { transform: translateX(0); }

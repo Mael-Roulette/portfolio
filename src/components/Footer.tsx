@@ -10,7 +10,7 @@ export default function Footer () {
   ];
 
   return (
-    <footer className="border-foreground/30 border-t-1">
+    <footer className="border-foreground/30 border-t">
       <div className="flex flex-col lg:flex-row">
         <div className="py-3 pr-5 lg:py-5 lg:pr-8 lg:pl-12 lg:w-fit border-b lg:border-b-0 lg:border-r border-foreground/30 flex items-center justify-center lg:justify-start">
           <Link href="/">
@@ -18,38 +18,36 @@ export default function Footer () {
             <p className="text-xl">ROULETTE</p>
           </Link>
         </div>
-        <div className="py-4 px-5 space-y-4">
+        <div className="py-4 px-5 space-y-4 w-full">
           <p className="text-xl lg:text-2xl font-bold">Une idée ou un projet&nbsp;? Échangeons&nbsp;!</p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 w-full">
             <Link
               className="btn-primary"
               href="mailto:contact@mael-roulette.fr"
             >
               Me contacter <GoArrowRight className="text-2xl" />
             </Link>
-          </div>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                className="btn-primary p-3"
+                href="https://github.com/Mael-Roulette"
+                target="_blank"
+              >
+                <FaGithub className="text-2xl" />
+              </Link>
 
-          <div className="flex flex-wrap gap-4">
-            <Link
-              className="btn-primary p-3"
-              href="https://github.com/Mael-Roulette"
-              target="_blank"
-            >
-              <FaGithub className="text-2xl" />
-            </Link>
+              <Link
+                className="btn-primary p-3"
+                href="https://www.linkedin.com/in/maelroulette/"
+                target="_blank"
+              >
+                <FaLinkedinIn className="text-2xl" />
+              </Link>
 
-            <Link
-              className="btn-primary p-3"
-              href="https://www.linkedin.com/in/maelroulette/"
-              target="_blank"
-            >
-              <FaLinkedinIn className="text-2xl" />
-            </Link>
-
-            {/* TODO: Ajouter CV */}
-            <Link className="btn-primary p-3 font-bold" href="/mael-roulette-cv.pdf" target="_blank">
-              CV
-            </Link>
+              <Link className="btn-primary p-3 font-bold" href="/mael-roulette-cv.pdf" target="_blank">
+                CV
+              </Link>
+            </div>
           </div>
         </div>
       </div>

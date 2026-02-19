@@ -10,7 +10,7 @@ export default function ProjectCard ( { card }: ProjectCardProps ) {
   return (
     <Link href={ `/projets/${ card.slug }` } className="block px-5 py-10 lg:py-12 lg:px-12 space-y-4">
       <h3 className="font-jubble text-3xl lg:text-4xl">{ card.title }</h3>
-      <div className="w-full h-[250px] lg:h-[350px] rounded-lg relative overflow-hidden">
+      <div className="w-full h-62.5 lg:h-87.5 rounded-lg relative overflow-hidden">
         <Image
           src={ card.cover }
           alt={ card.title }

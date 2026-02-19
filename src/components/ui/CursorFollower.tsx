@@ -50,7 +50,7 @@ export default function CursorFollower () {
   return (
     <div
       ref={ cursorRef }
-      className="pointer-events-none fixed top-0 left-0 z-[9999]
+      className="pointer-events-none fixed top-0 left-0 z-9999
                  h-8 w-8 rounded-full bg-secondary mix-blend-difference
                  items-center justify-center hidden lg:flex"
     >
