@@ -73,7 +73,7 @@ export default function HeroSection () {
         <Link href="/projets" className="btn-primary">
           Découvrir mes projets
         </Link>
-        <Link href="/contact" className="btn-primary">
+        <Link href="#footer" className="btn-primary">
           Me contacter <GoArrowRight className="text-2xl" />
         </Link>
       </div>

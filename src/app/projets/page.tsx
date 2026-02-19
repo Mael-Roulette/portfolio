@@ -4,9 +4,37 @@ import ProjectCard from "@/components/projects/card";
 import CursorFollower from "@/components/ui/CursorFollower";
 
 export const metadata: Metadata = {
-  title: "Mes projets - Maël Roulette - Développeur Web & Mobile",
-  description: "Développeur Web & Mobile",
+  title: "Projets - Portfolio Développement Web & Applications",
+  description:
+    "Découvrez les projets de développement web et applications réalisés par Maël Roulette. Projets personnels, académiques et professionnels, avec présentation des objectifs, choix techniques et résultats.",
+
+  alternates: {
+    canonical: "/projets"
+  },
+
+  openGraph: {
+    title: "Projets - Portfolio par Maël Roulette",
+    description:
+      "Liste des projets de développement web et applications réalisés par Maël Roulette.",
+    url: "https://mael-roulette.fr/projets",
+    siteName: "Maël Roulette",
+    locale: "fr_FR",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Projets - par Maël Roulette",
+    description:
+      "Portfolio de projets en développement web et applications.",
+  },
+
+  robots: {
+    index: true,
+    follow: true
+  }
 };
+
 
 export default function Projects () {
   return (

@@ -11,10 +11,12 @@ type ProjectDetailsPageProps = {
   };
 };
 
+
 export async function generateMetadata (
   { params }: ProjectDetailsPageProps
 ): Promise<Metadata> {
-  const { slug } = await params;
+
+  const { slug } = params;
 
   const project = ProjectsDetails.find(
     ( project ) => project.slug === slug
@@ -24,9 +26,35 @@ export async function generateMetadata (
     redirect( "/" );
   }
 
+  const projectUrl = `https://mael-roulette.fr/projets/${project.slug}`;
+
   return {
-    title: project.title,
-    description: project.description,
+    title: `${project.title} - Projet`,
+    description: `${project.title} — ${project.tags.join( ", " )} par Maël Roulette`,
+
+    alternates: {
+      canonical: projectUrl,
+    },
+
+    openGraph: {
+      title: `${project.title} - Projet par Maël Roulette`,
+      description: `${project.description}`,
+      url: projectUrl,
+      siteName: "Maël Roulette",
+      type: "article",
+      locale: "fr_FR",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} - Maël Roulette`,
+      description: project.description,
+    },
+
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 
