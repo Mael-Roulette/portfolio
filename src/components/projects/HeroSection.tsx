@@ -15,6 +15,7 @@ export default function HeroSection ( { project }: HeroSectionProps ) {
           src={ project.hero }
           alt={ project.title }
           fill
+          preload
           className="object-cover"
         />
       </div>
