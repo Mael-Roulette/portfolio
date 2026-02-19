@@ -29,7 +29,7 @@ export default function ProjectsSection () {
         opacity: 0,
         y: 60,
         duration: .6,
-        delay: 1,
+        delay: .6,
         ease: "power3.out",
       } );
 

@@ -58,7 +58,7 @@ export default function Projects () {
         )}
       </ul>
 
-      <div className="flex justify-center py-6">
+      <div className="flex justify-center px-5 py-6">
         <p className="text-xl">D&apos;autres projets sont à venir. N&apos;hésitez pas à visiter mon profil sur <a href="https://github.com/Mael-Roulette" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">GitHub</a>.</p>
       </div>
     </main>

@@ -9,7 +9,7 @@ interface HeroSectionProps {
 
 export default function HeroSection ( { project }: HeroSectionProps ) {
   return (
-    <section className="border-foreground/30 border-b py-8 px-5 lg:px-12 grid lg:grid-cols-[2fr_1fr] gap-5">
+    <section className="border-foreground/30 border-b mt-8 pb-8 px-5 lg:px-12 grid lg:grid-cols-[2fr_1fr] gap-5">
       <div className="relative w-full h-55 md:h-75 lg:h-100 rounded-lg overflow-hidden">
         <Image
           src={ project.hero }

@@ -16,7 +16,7 @@ export async function generateMetadata (
   { params }: ProjectDetailsPageProps
 ): Promise<Metadata> {
 
-  const { slug } = params;
+  const { slug } = await params;
 
   const project = ProjectsDetails.find(
     ( project ) => project.slug === slug
@@ -81,10 +81,10 @@ export default async function ProjectDetailsPage ( { params }: ProjectDetailsPag
   }
 
   return (
-    <>
+    <main>
       <HeroSection project={ project } />
       <StackSection stack={ project.technos } />
       <ContentSection projectContent={ project.content } />
-    </>
+    </main>
   );
 }

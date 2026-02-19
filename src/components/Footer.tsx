@@ -4,9 +4,9 @@ import { GoArrowRight } from "react-icons/go";
 
 export default function Footer () {
   const legalMenu = [
-    { label: "Mentions légales", link: "/mention-legales" },
+    { label: "Mentions légales", link: "/mentions-legales" },
     { label: "Maël Roulette @2026", link: "" },
-    { label: "Politique de confidentialité", link: "/politique-confidentialite" }
+    { label: "Politique de confidentialité", link: "/politique-de-confidentialite" }
   ];
 
   return (
