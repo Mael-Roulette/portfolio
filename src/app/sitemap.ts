@@ -18,13 +18,13 @@ export default function sitemap (): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/legal-notices`,
+      url: `${baseUrl}/mentions-legales`,
       lastModified,
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
-      url: `${baseUrl}/privacy-policy`,
+      url: `${baseUrl}/politique-de-confidentialite`,
       lastModified,
       changeFrequency: "yearly",
       priority: 0.3,
