@@ -17,6 +17,6 @@ export interface ProjectDetails {
 }
 
 type ProjectLinks = {
-    site: string;
+    site?: string;
     github?: string;
 };
