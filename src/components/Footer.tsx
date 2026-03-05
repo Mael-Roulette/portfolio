@@ -14,7 +14,6 @@ export default function Footer () {
       <div className="flex flex-col lg:flex-row">
         <div className="py-3 pr-5 lg:py-5 lg:pr-8 lg:pl-12 lg:w-fit border-b lg:border-b-0 lg:border-r border-foreground/30 flex items-center justify-center lg:justify-start">
           <Link href="/">
-            {/* TODO: Ajouter le logo */}
             <p className="text-3xl font-jubble text-secondary">ROULETTE</p>
           </Link>
         </div>
@@ -27,27 +26,43 @@ export default function Footer () {
             >
               Me contacter <GoArrowRight className="text-2xl" />
             </Link>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                className="btn-primary p-3"
-                href="https://github.com/Mael-Roulette"
-                target="_blank"
-              >
-                <FaGithub className="text-2xl" />
-              </Link>
+            <ul className="flex flex-wrap gap-4">
+              <li>
+                <Link
+                  className="btn-primary p-3"
+                  href="https://github.com/Mael-Roulette"
+                  target="_blank"
+                  title="Github"
+                  aria-label="Github"
+                >
+                  <FaGithub className="text-2xl" title="Icône Github" />
+                </Link>
+              </li>
 
-              <Link
-                className="btn-primary p-3"
-                href="https://www.linkedin.com/in/maelroulette/"
-                target="_blank"
-              >
-                <FaLinkedinIn className="text-2xl" />
-              </Link>
+              <li>
+                <Link
+                  className="btn-primary p-3"
+                  href="https://www.linkedin.com/in/maelroulette/"
+                  target="_blank"
+                  title="Linkedin"
+                  aria-label="Linkedin"
+                >
+                  <FaLinkedinIn className="text-2xl" title="Icône Linkedin" />
+                </Link>
+              </li>
 
-              <Link className="btn-primary p-3 font-bold" href="/mael-roulette-cv.pdf" target="_blank">
-                CV
-              </Link>
-            </div>
+              <li>
+                <Link
+                  className="btn-primary p-3 font-bold"
+                  href="/mael-roulette-cv.pdf"
+                  target="_blank"
+                  title="Curriculum vitae"
+                  aria-label="Curriculum vitae"
+                >
+                  CV
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
