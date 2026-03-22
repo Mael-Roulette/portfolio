@@ -22,5 +22,11 @@
     "title": "ATI 35",
     "cover": "/images/ati-35/cover.webp",
     "tag": "Site vitrine"
+  },
+  {
+    "slug": "plan-au-sol",
+    "title": "Plan Au Sol",
+    "cover": "/images/plan-au-sol/cover.webp",
+    "tag": "Outil web"
   }
 ]
