@@ -147,7 +147,7 @@ export default function ExperienceSection () {
                 href="https://github.com/Mael-Roulette"
                 target="_blank"
               >
-                Github <FaGithub className="text-2xl" />
+                Github <FaGithub className="text-2xl" title="Icône Github" />
               </Link>
               <Link
                 className="btn-primary"

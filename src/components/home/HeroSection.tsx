@@ -73,7 +73,7 @@ export default function HeroSection () {
         <Link href="/projets" className="btn-primary">
           Découvrir mes projets
         </Link>
-        <Link href="#footer" className="btn-primary">
+        <Link href="mailto:contact@mael-roulette.fr" className="btn-primary">
           Me contacter <GoArrowRight className="text-2xl" />
         </Link>
       </div>
@@ -81,10 +81,11 @@ export default function HeroSection () {
       <div className="flex flex-col items-end border-y border-y-foreground/30">
         <div className="px-5 w-fit lg:w-4/5 2xl:w-3/4 border-l border-l-foreground/30 h-full flex flex-col justify-center">
           <h1 className="split text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-right uppercase font-bold">
-            Développeur
-            <br />
-            <span className="font-jubble text-secondary">Web</span> &{" "}
-            <span className="font-jubble text-secondary">Mobile</span>
+            <span className="block">Développeur</span>
+            <span className="block">
+              <span className="font-jubble text-secondary">Web</span> &{" "}
+              <span className="font-jubble text-secondary">Mobile</span>
+            </span>
           </h1>
         </div>
       </div>
