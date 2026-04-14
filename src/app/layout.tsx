@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
+import CursorFollower from "@/components/ui/CursorFollower";
 
 const jubble = localFont( {
   src: "../../public/fonts/jubble.otf",
@@ -34,6 +35,7 @@ export default function RootLayout ( {
     <html lang="fr" className={ `${ztNature.className} ${jubble.className} scroll-smooth` }>
       <body className={ `${ztNature.variable} ${jubble.variable}` }>
         <SmoothScrollProvider>
+          <CursorFollower />
           <Header />
           {children}
           <Footer />

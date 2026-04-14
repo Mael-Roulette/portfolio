@@ -1,7 +1,6 @@
-import { Metadata } from "next";
-import projectsCards from "@/data/projects.cards.json";
 import ProjectCard from "@/components/projects/card";
-import CursorFollower from "@/components/ui/CursorFollower";
+import projectsCards from "@/data/projects.cards.json";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Projets - Portfolio Développement Web & Applications",
@@ -48,7 +47,6 @@ export const metadata: Metadata = {
 export default function Projects () {
   return (
     <main>
-      <CursorFollower />
       <h1 className="text-6xl lg:text-8xl font-bold mb-8 px-5 lg:px-12 pt-8">Mes <span className="font-jubble text-secondary">projets</span></h1>
       <ul className="grid md:grid-cols-2 lg:grid-cols-3">
         { projectsCards.map( ( card ) =>
