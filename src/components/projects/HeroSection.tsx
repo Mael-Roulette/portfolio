@@ -15,6 +15,7 @@ export default function HeroSection ( { project }: HeroSectionProps ) {
           src={ project.hero }
           alt={ project.title }
           fill
+          sizes="(max-width: 1024px) 100vw, 66vw"
           preload
           className="object-cover"
         />

@@ -4,7 +4,6 @@ export const technos = [
   "mongodb",
   "nestjs",
   "nextjs",
-  "php",
   "postgresql",
   "react-native",
   "sass",
@@ -13,15 +12,10 @@ export const technos = [
   "wordpress",
   "javascript",
   "git",
-  "flutter",
   "figma",
-  "mysql",
-  "ubuntu",
   "docker",
   "blender",
-  "html",
   "prisma",
-  "java",
   "symfony",
 ];
 

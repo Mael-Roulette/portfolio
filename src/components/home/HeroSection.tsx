@@ -59,11 +59,20 @@ export default function HeroSection () {
       className="h-[calc(100dvh-54px)] lg:h-[calc(100dvh-69px)] grid grid-rows-3 md:grid-rows-[2fr_1fr_2fr]"
     >
       <div className="h-full border-b border-b-foreground/30">
-        <div className="px-5 w-fit lg:w-4/5 2xl:w-3/4 border-r border-r-foreground/30 h-full flex flex-col justify-center">
-          <p className="split text-6xl md:text-8xl lg:text-9xl xl:text-[150px] uppercase font-jubble">
+        <div
+          className="px-5 w-fit lg:w-4/5 2xl:w-3/4 border-r border-r-foreground/30 h-full flex flex-col justify-center"
+          aria-label="Roulette Maël"
+        >
+          <p
+            className="split text-6xl md:text-8xl lg:text-9xl xl:text-[150px] uppercase font-jubble"
+            aria-hidden="true"
+          >
             Roulette
           </p>
-          <p className="split text-6xl md:text-8xl lg:text-9xl xl:text-[150px] uppercase font-bold">
+          <p
+            className="split text-6xl md:text-8xl lg:text-9xl xl:text-[150px] uppercase font-bold"
+            aria-hidden="true"
+          >
             Maël
           </p>
         </div>
@@ -80,9 +89,12 @@ export default function HeroSection () {
 
       <div className="flex flex-col items-end border-y border-y-foreground/30">
         <div className="px-5 w-fit lg:w-4/5 2xl:w-3/4 border-l border-l-foreground/30 h-full flex flex-col justify-center">
-          <h1 className="split text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-right uppercase font-bold">
-            <span className="block">Développeur</span>
-            <span className="block">
+          <h1
+            className="split text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-right uppercase font-bold"
+            aria-label="Développeur Web & Mobile"
+          >
+            <span className="block" aria-hidden="true">Développeur</span>
+            <span className="block" aria-hidden="true">
               <span className="font-jubble text-secondary">Web</span> &{" "}
               <span className="font-jubble text-secondary">Mobile</span>
             </span>
