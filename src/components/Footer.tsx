@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { GoArrowRight } from "react-icons/go";
+import { MdOutlineAddLink } from "react-icons/md";
 
 export default function Footer () {
   const legalMenu = [
@@ -26,6 +27,13 @@ export default function Footer () {
             >
               Me contacter <GoArrowRight className="text-2xl" />
             </Link>
+            <Link
+              className="btn-primary"
+              href="https://linktree.mael-roulette.fr"
+              target="_blank"
+            >
+              Linktree <MdOutlineAddLink className="text-2xl" />
+            </Link>
             <ul className="flex flex-wrap gap-4">
               <li>
                 <Link
@@ -35,7 +43,7 @@ export default function Footer () {
                   title="Github"
                   aria-label="Github"
                 >
-                  <FaGithub className="text-2xl" title="Icône Github" />
+                  <FaGithub className="text-2xl" title="Github" />
                 </Link>
               </li>
 
@@ -47,7 +55,7 @@ export default function Footer () {
                   title="Linkedin"
                   aria-label="Linkedin"
                 >
-                  <FaLinkedinIn className="text-2xl" title="Icône Linkedin" />
+                  <FaLinkedinIn className="text-2xl" title="Linkedin" />
                 </Link>
               </li>
 
